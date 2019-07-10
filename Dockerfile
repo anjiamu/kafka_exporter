@@ -6,10 +6,8 @@ COPY run.sh /bin/run.sh
 
 EXPOSE     9308
 
-#ENV kafka_server_addr "192.168.17.45:9093"
-
 RUN mkdir -p /etc/exmple2 \
-    && chmod +x /bin/kafka_exporter
+    && chmod +x /bin/kafka_exporter \
+	&& chmod +x /bin/run.sh
 
-#ENTRYPOINT /bin/kafka_exporter --kafka.server=${kafka_server_addr}
-ENTRYPOINT sh /bin/run.sh
+ENTRYPOINT /bin/run.sh
