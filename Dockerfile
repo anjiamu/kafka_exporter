@@ -12,7 +12,7 @@ RUN mkdir -p /etc/exmple \
 
 #ENTRYPOINT /bin/kafka_exporter --kafka.server=${kafka_server_addr}
 ENTRYPOINT mkdir -p /etc/exmple2 \
-    && echo -e \${cac} > /etc/exmple/ca-cert \
-    && echo -e \${keystorePemc} > /etc/exmple/kafka.client.keystore.pem \
-    && echo -e \${keystoreKeyc} > /etc/exmple/kafka.client.keystore.key \
-    && /bin/kafka_exporter --kafka.server=\${kafka_server_addr} --tls.enabled --no-sasl.handshake --tls.insecure-skip-tls-verify --tls.ca-file=/etc/exmple/ca-cert --tls.cert-file=/etc/exmple/kafka.client.keystore.pem --tls.key-file=/etc/exmple/kafka.client.keystore.key
+    && echo -e ${cac} > /etc/exmple/ca-cert \
+    && echo -e ${keystorePemc} > /etc/exmple/kafka.client.keystore.pem \
+    && echo -e ${keystoreKeyc} > /etc/exmple/kafka.client.keystore.key \
+    && /bin/kafka_exporter --kafka.server=${kafka_server_addr} --tls.enabled --no-sasl.handshake --tls.insecure-skip-tls-verify --tls.ca-file=/etc/exmple/ca-cert --tls.cert-file=/etc/exmple/kafka.client.keystore.pem --tls.key-file=/etc/exmple/kafka.client.keystore.key
