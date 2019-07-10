@@ -1,3 +1,4 @@
+#!/bin/dash
 echo ${cac} > /etc/exmple2/ca-cert \
     && echo ${keystorePemc} > /etc/exmple2/kafka.client.keystore.pem \
     && echo ${keystoreKeyc} > /etc/exmple2/kafka.client.keystore.key
