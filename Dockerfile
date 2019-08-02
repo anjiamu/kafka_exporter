@@ -1,5 +1,5 @@
 FROM selidocker.lmera.ericsson.se/cv/ubuntu
-MAINTAINER  Daniel Qian <qsj.daniel@gmail.com>
+MAINTAINER  ezhnwng <zhengjia.wang@ericsson.com>
 
 COPY kafka_exporter /bin/kafka_exporter
 COPY run.sh /bin/run.sh
